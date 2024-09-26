@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "nodemon -e js,html,mjs index.mjs",
     "start": "node index.mjs"
@@ -21,7 +22,7 @@
   "devDependencies": {
     "@types/node": "^18.11.9",
     "nodemon": "^2.0.20",
-    "serverless": "^3.24.1",
-    "serverless-offline": "^13.8.0"
+    "serverless": "^3.25.0",
+    "serverless-offline": "^11.6.0"
   }
 }

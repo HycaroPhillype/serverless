@@ -1,4 +1,4 @@
-const { randomUUID } = require('crypto')
+import { randomUUID } from 'crypto'
 
 const previousResults = new Map()
 
@@ -14,7 +14,7 @@ function extractBody ( event ) {
 }
 
 
-module.exports.sendResponse = async (event) => {
+export async function sendResponse(event) {
   const { name, answers } = extractBody(event)
   const correctQuestions = [3, 1, 0, 2]
 
@@ -50,7 +50,7 @@ module.exports.sendResponse = async (event) => {
   }
 }
 
-module.exports.getResult = async (event) => {
+export async function getResult(event) {
   const result = previousResults.get(event.pathParameters.id)
   if (!result) {
     return {
